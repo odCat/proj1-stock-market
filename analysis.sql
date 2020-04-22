@@ -38,3 +38,9 @@ from Stocks;
 .print 'Maximum price'
 select symbol, max(price), date
 from Stocks;
+
+.print ''
+
+select printf("%6.2f", price), name
+from Stocks
+group by 2;
