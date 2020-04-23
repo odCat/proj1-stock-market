@@ -41,7 +41,7 @@ from Stocks;
 
 .print ''
 
-select printf("%6.2f", avg(price)) as ' Price', name
+select printf("%6.2f", avg(price)) as 'Price', name
 from Stocks
 group by 2
 order by 1;
