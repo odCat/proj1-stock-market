@@ -47,3 +47,19 @@ group by 2
 order by 1;
 
 .print ''
+
+select date, printf("%6.2f", avg(price)) as 'Price'
+from Stocks
+group by 1
+order by 1 desc;
+
+.print ''
+
+.print 'Which rows have a price greater than the average?'
+select *
+from Stocks
+where price > (
+        select avg(price)
+        from Stocks
+    )
+order by price;
